@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #020617;
+  --primary: #0f2b52;
+  --primary-dark: #081226;
+  --primary-light: #1e4a78;
+  --primary-glow: #3f7cad;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #ffffff;
+  --accent: #0369a1;
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #020617;
+  --muted: #e8ecf1;
+  --muted-foreground: #475569;
+  --border: #e2e8f0;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --ring: #0f2b52;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-primary-glow: var(--primary-glow);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-ring: var(--ring);
+  --font-serif: var(--font-eb-garamond);
+  --font-sans: var(--font-lato);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.btn-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--accent),
+    color-mix(in oklab, var(--accent) 55%, var(--primary-glow))
+  );
+}
+.btn-gradient:hover,
+.btn-gradient:focus-visible {
+  background-image: none;
+}
+
+.bg-navy-glow {
+  background-image: radial-gradient(
+    ellipse 60% 55% at 82% 15%,
+    color-mix(in oklab, var(--primary-glow) 38%, transparent),
+    transparent 70%
+  );
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-entrance {
+  opacity: 0;
+  animation: fade-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-entrance {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
