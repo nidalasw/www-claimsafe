@@ -90,3 +90,94 @@ export function IconClose(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconArrowRight(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+export function IconDocument(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8.5L14 2.5Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14 2.5V8.5H19.5" />
+      <path strokeLinecap="round" d="M8.5 13h7M8.5 17h7" />
+    </svg>
+  );
+}
+
+export function IconChat(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M21 11.5a8 8 0 0 1-8 8H7.5L3 22l1-4.6A8 8 0 1 1 21 11.5Z"
+      />
+    </svg>
+  );
+}
+
+export function IconScale(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18M6 7l-3.5 7a3.5 3.5 0 0 0 7 0L6 7ZM18 7l-3.5 7a3.5 3.5 0 0 0 7 0L18 7ZM4 21h16M4.5 7h15" />
+    </svg>
+  );
+}
+
+export function IconShield(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.5 20 6v6c0 5.2-3.4 9-8 10.5-4.6-1.5-8-5.3-8-10.5V6l8-3.5Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m8.5 12 2.5 2.5 4.5-5" />
+    </svg>
+  );
+}
+
+export function IconUsers(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 21v-2a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v2" />
+      <circle cx="10.5" cy="7" r="3.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 21v-2a4 4 0 0 0-2.7-3.78M14.7 3.3a3.5 3.5 0 0 1 0 6.9" />
+    </svg>
+  );
+}
+
+export function IconCar(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 16.5v-3l1.8-4.7A2 2 0 0 1 7.7 7.5h8.6a2 2 0 0 1 1.9 1.3L20 13.5v3"
+      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16.5h16v2.3a1.2 1.2 0 0 1-1.2 1.2h-1.1a1.2 1.2 0 0 1-1.2-1.2v-.8H7.5v.8a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 18.8v-2.3Z" />
+      <circle cx="7.5" cy="16.5" r="1.4" />
+      <circle cx="16.5" cy="16.5" r="1.4" />
+    </svg>
+  );
+}
+
+export function IconTag(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20.5 12.7 12.7 20.5a1.5 1.5 0 0 1-2.1 0L3.5 13.4a1.5 1.5 0 0 1 0-2.1L11.3 3.5H18a2.5 2.5 0 0 1 2.5 2.5v6.7Z" />
+      <circle cx="15" cy="9" r="1.5" />
+    </svg>
+  );
+}
+
+export function IconClipboardCheck(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 4.5h8a1 1 0 0 1 1 1V21H7V5.5a1 1 0 0 1 1-1Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9.5 3h5a.5.5 0 0 1 .5.5V5h-6V3.5a.5.5 0 0 1 .5-.5Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m9.5 13 2 2 3.5-4" />
+    </svg>
+  );
+}
