@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "titleDefault": "Gestion ClaimSafe Inc. | Gestion de garanties pour concessionnaires",
+    "titleTemplate": "%s | Gestion ClaimSafe Inc.",
+    "description": "Gestion ClaimSafe Inc. simplifie les réclamations de garantie des concessionnaires Stellantis partout au Canada — traitement des réclamations, consultation et réconciliation des horaires pour maximiser vos revenus de garantie."
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "bookNow": "Réserver",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "skipToContent": "Passer au contenu",
+    "homeAriaLabel": "Accueil ClaimSafe"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français"
+  },
+  "footer": {
+    "tagline": "Votre partenaire en garanties, pas seulement un administrateur.",
+    "navigation": "Navigation",
+    "hours": "Heures",
+    "contact": "Contact",
+    "rights": "Tous droits réservés."
+  },
+  "hours": {
+    "label": "Heures d'ouverture",
+    "items": [
+      { "days": "Lun. – sam.", "time": "10 h à 21 h" },
+      { "days": "Dimanche", "time": "12 h à 17 h" }
+    ]
+  },
+  "contactInfo": {
+    "emailLabel": "Courriel",
+    "phoneLabel": "Téléphone",
+    "officeLabel": "Bureau"
+  },
+  "home": {
+    "statBar": {
+      "partners": "Concessionnaires partenaires",
+      "brands": "Marques Stellantis desservies",
+      "yearValue": "1 an",
+      "yearLabel": "De 3 à 18 succursales"
+    },
+    "marquee": [
+      "Gestion des réclamations de garantie",
+      "Consultation",
+      "Réconciliation des horaires",
+      "Récupération de l'arriéré de réclamations",
+      "Soumissions DI et WAC",
+      "Formation des conseillers"
+    ],
+    "hero": {
+      "badge": "La confiance des concessionnaires Stellantis partout au Canada",
+      "titleLine1": "Les réclamations de garantie,",
+      "titleLine2": "Simplifiées.",
+      "description": "Une gestion complète des réclamations de garantie pour les concessionnaires Stellantis — traitée avec la précision, la rapidité et la rigueur que mérite votre service après-vente.",
+      "ctaPrimary": "Réserver une consultation",
+      "ctaSecondary": "Découvrir nos services",
+      "imageAlt": "Un conseiller au service examine à l'écran une réclamation de garantie approuvée, avec l'atelier du concessionnaire en arrière-plan"
+    },
+    "about": {
+      "eyebrow": "Services de gestion de garanties · À propos de nous",
+      "titleLine1": "« Votre partenaire en garanties,",
+      "titleLine2": "pas seulement un administrateur. »",
+      "paragraph1": "Fondée par Moe Naji après plusieurs années passées au sein de services après-vente de concessionnaires, ClaimSafe a pour mission de mettre fin au temps et aux revenus perdus à cause de réclamations de garantie incomplètes ou refusées.",
+      "paragraph2": "Ce qui a commencé avec 3 concessionnaires partenaires en compte aujourd'hui 18, en seulement un an. Nous collaborons désormais avec d'importants concessionnaires Chrysler, Dodge, Jeep, Ram, Fiat et Alfa Romeo partout au Canada — en gérant les soumissions de réclamations, les approbations DI, les négociations WAC, les escalades VOR et la comptabilité.",
+      "approachLabel": "Notre approche est simple :",
+      "approachItems": ["Maximiser la récupération des garanties", "Améliorer l'efficacité du service après-vente", "Réduire les rétrofacturations"],
+      "closing": "Chez ClaimSafe, nous faisons bien plus que gérer des réclamations — nous devenons une extension de votre équipe de service.",
+      "imageAlt": "Une équipe ClaimSafe examinant à l'écran des soumissions, approbations et récupérations de réclamations de garantie"
+    },
+    "services": {
+      "eyebrow": "Ce que nous faisons",
+      "title": "Services de gestion de garanties",
+      "viewAll": "Voir tous les services",
+      "learnMore": "En savoir plus",
+      "items": [
+        {
+          "title": "Gestion des réclamations de garantie",
+          "description": "Nous prenons en charge chaque étape du processus de réclamation de garantie — de la vérification et de la documentation jusqu'à la soumission et le suivi — pour assurer précision, conformité et paiements plus rapides."
+        },
+        {
+          "title": "Consultation",
+          "description": "Nous offrons un accompagnement expert pour aider les concessionnaires à améliorer leurs processus de garantie, réduire les refus et maximiser les remboursements du fabricant grâce à des pratiques éprouvées."
+        },
+        {
+          "title": "Réconciliation des horaires",
+          "description": "Nous révisons et harmonisons vos horaires de garantie avec les paiements du fabricant, en repérant les écarts et en assurant l'exactitude et la transparence de vos dossiers financiers."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Pourquoi ClaimSafe",
+      "title": "Pourquoi les concessionnaires nous choisissent",
+      "description": "Nous devenons une extension de votre service après-vente — en gérant les opérations de garantie avec rapidité, précision et rigueur, afin que votre équipe reste concentrée sur les clients et les réparations.",
+      "stats": [
+        { "value": "18+", "label": "Concessionnaires partenaires au Canada" },
+        { "value": "6", "label": "Marques Stellantis desservies" },
+        { "value": "1 → 18", "label": "Succursales en une seule année" }
+      ],
+      "items": [
+        {
+          "title": "Soumissions de réclamations rapides",
+          "description": "Des réclamations claires, complètes et prêtes pour vérification, soumises rapidement pour réduire les refus et les délais."
+        },
+        {
+          "title": "Moins de refus et de rétrofacturations",
+          "description": "Nous défendons le temps de diagnostic et les opérations requises afin que moins de réclamations reviennent impayées."
+        },
+        {
+          "title": "Plus de revenus de garantie récupérés",
+          "description": "Nous assurons le suivi des approbations RA, WAC et DI pour que rien d'admissible ne passe entre les mailles du filet."
+        },
+        {
+          "title": "Moins de travail pour votre équipe",
+          "description": "Conseillers et gestionnaires restent concentrés sur les clients — pas sur la paperasse et les suivis."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Comment ça fonctionne",
+      "title": "Commencez en 3 étapes simples",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Intégration et évaluation",
+          "description": "Nous examinons votre processus de garantie actuel, vos réclamations en cours et votre arriéré afin de cerner précisément où les revenus sont perdus."
+        },
+        {
+          "number": "02",
+          "title": "Nous prenons en charge vos réclamations",
+          "description": "Notre équipe gère les soumissions, les approbations DI, les négociations WAC et les escalades VOR, comme une extension de votre service après-vente."
+        },
+        {
+          "number": "03",
+          "title": "Vous êtes payé plus rapidement",
+          "description": "Une documentation claire et un suivi constant signifient moins de refus, des approbations plus rapides et plus de revenus récupérés."
+        }
+      ]
+    },
+    "whoWeHelp": {
+      "eyebrow": "Qui nous servons",
+      "title": "Concessionnaires Stellantis et leurs équipes",
+      "items": ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Conseillers au service", "Administrateurs de garantie"]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Foire aux questions",
+      "items": [
+        {
+          "question": "Avec quels concessionnaires travaillez-vous?",
+          "answer": "Nous collaborons avec des concessionnaires Chrysler, Dodge, Jeep, Ram, Fiat et Alfa Romeo partout au Canada, en prenant en charge l'ensemble de leur processus de réclamation de garantie, de la soumission jusqu'au paiement."
+        },
+        {
+          "question": "Comment ClaimSafe s'intègre-t-il à notre service après-vente actuel?",
+          "answer": "Nous agissons comme une extension de votre équipe — et non comme un remplacement. Vos conseillers et techniciens continuent de travailler normalement pendant que nous gérons la documentation, la soumission et le suivi des réclamations en coulisses."
+        },
+        {
+          "question": "Pouvez-vous nous aider avec un arriéré de réclamations refusées ou non soumises?",
+          "answer": "Oui. Le traitement de l'arriéré de réclamations est l'un de nos services principaux — nous révisons les réclamations anciennes, en attente ou refusées, les corrigeons et les soumettons de nouveau pour récupérer les revenus admissibles."
+        },
+        {
+          "question": "Quelle est votre grille tarifaire?",
+          "answer": "Nous offrons une tarification mensuelle simple et prévisible, sans frais surprises. Comme notre service est conçu pour récupérer des revenus de garantie que vous auriez autrement perdus, il s'autofinance généralement."
+        },
+        {
+          "question": "À quelle vitesse pouvons-nous commencer?",
+          "answer": "Après une courte évaluation d'intégration de vos réclamations et de votre processus actuels, nous pouvons commencer à gérer les nouvelles soumissions immédiatement, tout en traitant l'arriéré en parallèle."
+        },
+        {
+          "question": "Offrez-vous de la formation pour nos conseillers et techniciens?",
+          "answer": "Oui. Nous formons votre équipe aux meilleures pratiques de documentation pour les réparations, les diagnostics et les inspections, afin que les futures réclamations soient approuvées plus rapidement et refusées moins souvent."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à améliorer vos opérations de garantie?",
+      "button": "Demander une consultation"
+    },
+    "safeAutoJobs": {
+      "title": "Vous embauchez dans l'industrie automobile?",
+      "heading": "Découvrez SafeAutoJobs",
+      "description": "SafeAutoJobs est une plateforme de recrutement conçue spécifiquement pour l'industrie automobile, mettant en relation les entreprises automobiles avec des professionnels du secteur.",
+      "roles": "Techniciens • Conseillers au service • Spécialistes des pièces • Ventes • Carrossiers • Esthéticiens automobiles et plus",
+      "cta": "VISITER SAFE AUTO JOBS →",
+      "footnote": "Une entreprise de ClaimSafe Inc.",
+      "logoAlt": "SafeAutoJobs"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À propos",
+      "description": "Fondée par Moe Naji, ClaimSafe offre un service de gestion de garanties haut de gamme conçu exclusivement pour les concessionnaires Stellantis."
+    },
+    "hero": {
+      "eyebrow": "Qui nous sommes",
+      "title": "À propos de ClaimSafe",
+      "description": "Un service de gestion de garanties haut de gamme conçu exclusivement pour les concessionnaires Stellantis partout au Canada."
+    },
+    "story": {
+      "eyebrow": "Notre histoire",
+      "title": "À propos de ClaimSafe",
+      "paragraph1": "Fondée par Moe Naji, ClaimSafe offre un service de gestion de garanties haut de gamme conçu exclusivement pour les concessionnaires Stellantis. Nous gérons l'ensemble de votre processus de réclamations de garantie.",
+      "paragraph2": "Intégrée à votre service après-vente, ClaimSafe fournit une documentation prête pour vérification, des approbations dès la première soumission et un processus fluide qui améliore la rentabilité et la satisfaction de la clientèle.",
+      "purposeLabel": "Notre mission est claire",
+      "purposeTitle": "Rapide. Précis. Rentable.",
+      "purposeSubtitle": "Votre programme de garantie — rehaussé.",
+      "imageAlt": "Un technicien inspectant la boîte à fusibles d'un véhicule lors d'un diagnostic de garantie"
+    },
+    "why": {
+      "eyebrow": "Pourquoi nous choisir",
+      "title": "Conçu pour la performance des concessionnaires",
+      "description": "Nous aidons les concessionnaires Stellantis à récupérer plus de revenus de garantie avec moins de stress, moins de refus et des approbations plus rapides. Notre processus est clair, fiable et conçu pour que votre service après-vente fonctionne sans accroc, chaque jour.",
+      "reasons": [
+        {
+          "number": "01",
+          "title": "Précision dès le premier envoi",
+          "description": "Nous soumettons des réclamations claires, complètes et prêtes pour vérification afin de réduire les refus, les nouvelles soumissions et les délais."
+        },
+        {
+          "number": "02",
+          "title": "Approbations plus rapides",
+          "description": "Nous gérons les RA, WAC, demandes de véhicule de courtoisie, soumissions DI et escalades rapidement et professionnellement."
+        },
+        {
+          "number": "03",
+          "title": "Plus d'heures approuvées",
+          "description": "Nous défendons le temps de diagnostic et les opérations requises afin de maximiser les revenus de main-d'œuvre approuvés."
+        },
+        {
+          "number": "04",
+          "title": "Zéro stress pour vos conseillers",
+          "description": "Vos conseillers se concentrent sur la clientèle — pas sur la paperasse, les suivis ou les directives à respecter."
+        },
+        {
+          "number": "05",
+          "title": "Tarification prévisible",
+          "description": "Une tarification mensuelle simple, sans surprise. Un service haut de gamme qui s'autofinance grâce à l'augmentation des recouvrements."
+        }
+      ],
+      "allInOne": {
+        "title": "Tous les services réunis",
+        "description": "Traitement des réclamations, récupération de l'arriéré et formation des conseillers — tout est géré au même endroit."
+      }
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Services",
+      "description": "Traitement des réclamations, traitement de l'arriéré de réclamations et formation des conseillers et techniciens pour les opérations de garantie des concessionnaires Stellantis."
+    },
+    "hero": {
+      "eyebrow": "Ce que nous faisons",
+      "title": "Services",
+      "description": "Tout ce dont votre service après-vente a besoin pour soumettre, récupérer et se faire payer sur les réclamations de garantie — pris en charge de A à Z."
+    },
+    "sectionTitle": "Services de garantie",
+    "items": [
+      {
+        "title": "Traitement des réclamations",
+        "description": "Nous prenons en charge toutes les réclamations de garantie Stellantis — de la soumission à l'approbation — en assurant une documentation claire et une précision prête pour vérification. Moins de refus, des paiements plus rapides et plus d'heures approuvées.",
+        "alt": "Un technicien inspecte un véhicule capot ouvert sur un pont élévateur"
+      },
+      {
+        "title": "Traitement de l'arriéré de réclamations",
+        "description": "Nous prenons en charge l'arriéré de réclamations existant et le résorbons rapidement. Réclamations anciennes, en attente ou refusées — nous les corrigeons, les soumettons et récupérons les revenus admissibles pour votre service après-vente.",
+        "alt": "Un service après-vente animé avec plusieurs postes où des techniciens travaillent simultanément sur plusieurs véhicules"
+      },
+      {
+        "title": "Formation des conseillers et techniciens",
+        "description": "Nous formons les conseillers et techniciens à documenter correctement les réparations, diagnostics et inspections afin que les réclamations soient approuvées plus rapidement. Des pratiques exemplaires qui réduisent les refus.",
+        "alt": "Un conseiller au service et un technicien examinant ensemble un véhicule dans l'atelier"
+      }
+    ],
+    "cta": {
+      "title": "Un soutien de garantie fiable pour les concessionnaires en croissance",
+      "button": "Demander une consultation"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Communiquez avec Gestion ClaimSafe Inc. pour améliorer les opérations de garantie de votre concessionnaire."
+    },
+    "hero": {
+      "eyebrow": "Communiquez avec nous",
+      "title": "Contactez ClaimSafe",
+      "description": "Discutons de vos opérations de garantie — nous répondons généralement en moins d'un jour ouvrable."
+    },
+    "form": {
+      "heading": "Demander une consultation",
+      "subheading": "Remplissez vos informations et nous vous contacterons sous peu.",
+      "nameLabel": "Nom",
+      "emailLabel": "Courriel",
+      "dealershipLabel": "Nom du concessionnaire",
+      "messageLabel": "Comment pouvons-nous vous aider?",
+      "submit": "Demander une consultation",
+      "submitting": "Envoi en cours…",
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement.",
+      "successTitle": "Merci.",
+      "successBody": "Votre demande a bien été reçue. Un membre de notre équipe communiquera avec vous sous peu."
+    }
+  }
+}

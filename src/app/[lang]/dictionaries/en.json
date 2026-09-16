@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "titleDefault": "Gestion ClaimSafe Inc. | Warranty Management for Dealerships",
+    "titleTemplate": "%s | Gestion ClaimSafe Inc.",
+    "description": "Gestion ClaimSafe Inc. streamlines warranty claims for Stellantis dealerships across Canada — claim processing, consulting, and schedule reconciliation that maximizes warranty revenue."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "bookNow": "Book Now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content",
+    "homeAriaLabel": "ClaimSafe home"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français"
+  },
+  "footer": {
+    "tagline": "Your warranty partner, not just an administrator.",
+    "navigation": "Navigation",
+    "hours": "Hours",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "hours": {
+    "label": "Office Hours",
+    "items": [
+      { "days": "Mon–Sat", "time": "10:00 am – 9:00 pm" },
+      { "days": "Sunday", "time": "12:00 pm – 5:00 pm" }
+    ]
+  },
+  "contactInfo": {
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "officeLabel": "Office"
+  },
+  "home": {
+    "statBar": {
+      "partners": "Dealership Partners",
+      "brands": "Stellantis Brands Served",
+      "yearValue": "1 Year",
+      "yearLabel": "3 to 18 Locations"
+    },
+    "marquee": [
+      "Warranty Claim Management",
+      "Consulting",
+      "Schedule Reconciliation",
+      "Backlog Claim Recovery",
+      "DI & WAC Submissions",
+      "Advisor Training"
+    ],
+    "hero": {
+      "badge": "Trusted by Stellantis Dealerships Across Canada",
+      "titleLine1": "Warranty Claims,",
+      "titleLine2": "Made Simple.",
+      "description": "Full-service warranty claim management for Stellantis dealerships — handled with the accuracy, speed, and accountability your service department deserves.",
+      "ctaPrimary": "Book a Consultation",
+      "ctaSecondary": "Explore Services",
+      "imageAlt": "A service advisor reviewing an approved warranty claim on screen, with a dealership service bay behind him"
+    },
+    "about": {
+      "eyebrow": "Warranty Management Services · About Us",
+      "titleLine1": "“Your Warranty Partner,",
+      "titleLine2": "Not Just An Administrator.”",
+      "paragraph1": "Founded by Moe Naji after years inside dealership service departments, ClaimSafe exists to end the time and revenue lost to incomplete or rejected warranty claims.",
+      "paragraph2": "What began with 3 dealership partners has grown to 18 in just one year. Today we partner with leading Chrysler, Dodge, Jeep, Ram, Fiat, and Alfa Romeo dealerships across Canada — handling claim submissions, DI approvals, WAC negotiations, VOR escalations, and accounting.",
+      "approachLabel": "Our approach is simple:",
+      "approachItems": ["Maximize warranty recovery", "Improve service department efficiency", "Reduce chargebacks"],
+      "closing": "At ClaimSafe, we do more than manage claims — we become an extension of your service team.",
+      "imageAlt": "A ClaimSafe team reviewing warranty claim submissions, approvals, and recoveries on screen"
+    },
+    "services": {
+      "eyebrow": "What We Do",
+      "title": "Warranty Management Services",
+      "viewAll": "View All Services",
+      "learnMore": "Learn more",
+      "items": [
+        {
+          "title": "Warranty Claim Management",
+          "description": "We handle every step of the warranty claim process — from verification and documentation to submission and follow-up — ensuring accuracy, compliance, and faster payments."
+        },
+        {
+          "title": "Consulting",
+          "description": "We provide expert guidance to help dealerships improve their warranty processes, reduce rejections, and maximize factory reimbursements through proven best practices."
+        },
+        {
+          "title": "Schedule Reconciliation",
+          "description": "We review and align your warranty schedules with manufacturer payments, identifying discrepancies and ensuring your financial records stay accurate and transparent."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why ClaimSafe",
+      "title": "Why Dealerships Choose Us",
+      "description": "We become an extension of your service department — handling warranty operations with speed, accuracy, and accountability so your team can stay focused on customers and repairs.",
+      "stats": [
+        { "value": "18+", "label": "Dealership partners across Canada" },
+        { "value": "6", "label": "Stellantis brands served" },
+        { "value": "1 → 18", "label": "Locations grown in a single year" }
+      ],
+      "items": [
+        {
+          "title": "Fast Claim Submissions",
+          "description": "Clean, complete, audit-ready claims submitted quickly to reduce rejections and delays."
+        },
+        {
+          "title": "Reduced Rejections & Chargebacks",
+          "description": "We defend diagnostic time and required operations so fewer claims come back unpaid."
+        },
+        {
+          "title": "More Recovered Warranty Revenue",
+          "description": "We chase down RA, WAC, and DI approvals so nothing eligible slips through the cracks."
+        },
+        {
+          "title": "Less Workload for Your Team",
+          "description": "Advisors and managers stay focused on customers — not paperwork and follow-ups."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "How It Works",
+      "title": "Get Started in 3 Simple Steps",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Onboarding & Assessment",
+          "description": "We review your current warranty workflow, open claims, and backlog to understand exactly where revenue is being lost."
+        },
+        {
+          "number": "02",
+          "title": "We Take Over Your Claims",
+          "description": "Our team manages submissions, DI approvals, WAC negotiations, and VOR escalations as an extension of your service department."
+        },
+        {
+          "number": "03",
+          "title": "You Get Paid Faster",
+          "description": "Clean documentation and consistent follow-up mean fewer rejections, quicker approvals, and more recovered revenue."
+        }
+      ]
+    },
+    "whoWeHelp": {
+      "eyebrow": "Who We Serve",
+      "title": "Stellantis Dealerships & Their Teams",
+      "items": ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Service Advisors", "Warranty Administrators"]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Which dealerships do you work with?",
+          "answer": "We partner with Chrysler, Dodge, Jeep, Ram, Fiat, and Alfa Romeo dealerships across Canada, handling their full warranty claim workflow from submission to payment."
+        },
+        {
+          "question": "How does ClaimSafe fit into our existing service department?",
+          "answer": "We operate as an extension of your team — not a replacement. Your advisors and technicians keep working as usual while we manage claim documentation, submission, and follow-up in the background."
+        },
+        {
+          "question": "Can you help with an existing backlog of rejected or unfiled claims?",
+          "answer": "Yes. Backlog claims processing is one of our core services — we review old, pending, or rejected claims, correct them, and resubmit to recover eligible revenue."
+        },
+        {
+          "question": "What does pricing look like?",
+          "answer": "We offer simple, predictable monthly pricing with no surprise fees. Because our service is built to recover warranty revenue you'd otherwise lose, it typically pays for itself."
+        },
+        {
+          "question": "How quickly can we get started?",
+          "answer": "After a short onboarding assessment of your current claims and workflow, we can begin managing new submissions right away while we work through any backlog in parallel."
+        },
+        {
+          "question": "Do you offer training for our advisors and technicians?",
+          "answer": "Yes. We train your team on documentation best practices for repairs, diagnostics, and inspections so future claims are approved faster and rejected less often."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Improve Your Warranty Operations?",
+      "button": "Request Consultation"
+    },
+    "safeAutoJobs": {
+      "title": "Hiring in the Automotive Industry?",
+      "heading": "Meet SafeAutoJobs",
+      "description": "SafeAutoJobs is a recruitment marketplace built specifically for the automotive industry, connecting automotive businesses with automotive professionals.",
+      "roles": "Technicians • Service Advisors • Parts Professionals • Sales • Body Technicians • Detailers & More",
+      "cta": "VISIT SAFE AUTO JOBS →",
+      "footnote": "A ClaimSafe Inc. company.",
+      "logoAlt": "SafeAutoJobs"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "Founded by Moe Naji, ClaimSafe provides a premium warranty-management service built exclusively for Stellantis dealerships."
+    },
+    "hero": {
+      "eyebrow": "Who We Are",
+      "title": "About ClaimSafe",
+      "description": "A premium warranty-management service built exclusively for Stellantis dealerships across Canada."
+    },
+    "story": {
+      "eyebrow": "Our Story",
+      "title": "About ClaimSafe",
+      "paragraph1": "Founded by Moe Naji, ClaimSafe provides a premium warranty-management service built exclusively for Stellantis dealerships. We manage your entire warranty workflow claims.",
+      "paragraph2": "Operating as an integrated part of your service department, ClaimSafe delivers audit-ready documentation, first-time approvals, and a seamless process that improves profitability and customer satisfaction.",
+      "purposeLabel": "Our purpose is clear",
+      "purposeTitle": "Fast. Accurate. Profitable.",
+      "purposeSubtitle": "Your warranty program — elevated.",
+      "imageAlt": "A technician inspecting a vehicle's fuse box during a warranty diagnostic"
+    },
+    "why": {
+      "eyebrow": "Why Choose Us",
+      "title": "Built for Dealership Results",
+      "description": "We help Stellantis dealerships recover more warranty revenue with less stress, fewer rejections, and faster approvals. Our process is clean, reliable, and built to make your service department run smoothly every single day.",
+      "reasons": [
+        {
+          "number": "01",
+          "title": "First-Time Accuracy",
+          "description": "We submit clean, complete, audit-ready claims to reduce rejections, resubmissions, and delays."
+        },
+        {
+          "number": "02",
+          "title": "Faster Approvals",
+          "description": "We handle RA, WAC, loaner requests, DI submissions, and escalations quickly and professionally."
+        },
+        {
+          "number": "03",
+          "title": "More Approved Hours",
+          "description": "We defend diagnostic time and required operations to maximize approved labor revenue."
+        },
+        {
+          "number": "04",
+          "title": "Zero Advisor Stress",
+          "description": "Your advisors focus on customers — not paperwork, follow-ups, or chasing guidelines."
+        },
+        {
+          "number": "05",
+          "title": "Predictable Pricing",
+          "description": "Simple monthly pricing with no surprises. A premium service that pays for itself through increased recovery."
+        }
+      ],
+      "allInOne": {
+        "title": "All Services Under One Roof",
+        "description": "Claim processing, backlog recovery, and advisor training — everything managed in one place."
+      }
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Services",
+      "description": "Claim processing, backlog claims processing, and advisor & technician training for Stellantis dealership warranty operations."
+    },
+    "hero": {
+      "eyebrow": "What We Do",
+      "title": "Services",
+      "description": "Everything your service department needs to submit, recover, and get paid on warranty claims — handled end to end."
+    },
+    "sectionTitle": "Warranty Services",
+    "items": [
+      {
+        "title": "Claim Processing",
+        "description": "We handle all Stellantis warranty claims — from submission to approval — ensuring clean documentation and audit-ready accuracy. Fewer rejections, faster payments, and more approved hours.",
+        "alt": "A technician inspecting a vehicle under its open hood on a service lift"
+      },
+      {
+        "title": "Backlog Claims Processing",
+        "description": "We take over existing backlog claims and clean them quickly. Old, pending, or rejected claims — we fix, submit, and recover eligible revenue for your service department.",
+        "alt": "A busy multi-bay service department with technicians working on several vehicles at once"
+      },
+      {
+        "title": "Advisor & Technician Training",
+        "description": "We train advisors and technicians to document repairs, diagnostics, and inspections correctly so claims are approved faster. Best practices that reduce rejections.",
+        "alt": "A service advisor and technician reviewing a vehicle together in the service bay"
+      }
+    ],
+    "cta": {
+      "title": "Trusted Warranty Support for Growing Dealerships",
+      "button": "Request Consultation"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch with Gestion ClaimSafe Inc. to improve your dealership's warranty operations."
+    },
+    "hero": {
+      "eyebrow": "Get In Touch",
+      "title": "Contact ClaimSafe",
+      "description": "Let's talk about your warranty operations — we typically respond within one business day."
+    },
+    "form": {
+      "heading": "Request a Consultation",
+      "subheading": "Fill in your details and we'll be in touch shortly.",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "dealershipLabel": "Dealership Name",
+      "messageLabel": "How Can We Help?",
+      "submit": "Request a Consultation",
+      "submitting": "Sending…",
+      "error": "Something went wrong. Please try again or email us directly.",
+      "successTitle": "Thank you.",
+      "successBody": "Your request has been received. A member of our team will be in touch shortly."
+    }
+  }
+}

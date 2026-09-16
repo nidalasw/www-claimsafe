@@ -1,8 +1,9 @@
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
 import { StatNumber } from "./StatNumber";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-export function StatBar() {
+export function StatBar({ dict }: { dict: Dictionary["home"]["statBar"] }) {
   return (
     <section className="relative z-10 -mt-10 sm:-mt-14">
       <Container>
@@ -12,17 +13,17 @@ export function StatBar() {
               <p className="font-display text-4xl font-extrabold tracking-tight text-primary">
                 <StatNumber value={18} suffix="+" />
               </p>
-              <p className="mt-1 text-sm font-medium text-muted-foreground">Dealership Partners</p>
+              <p className="mt-1 text-sm font-medium text-muted-foreground">{dict.partners}</p>
             </div>
             <div className="text-center sm:border-r sm:border-border/60 sm:pr-6 sm:text-left">
               <p className="font-display text-4xl font-extrabold tracking-tight text-primary">
                 <StatNumber value={6} />
               </p>
-              <p className="mt-1 text-sm font-medium text-muted-foreground">Stellantis Brands Served</p>
+              <p className="mt-1 text-sm font-medium text-muted-foreground">{dict.brands}</p>
             </div>
             <div className="text-center sm:text-left">
-              <p className="font-display text-4xl font-extrabold tracking-tight text-primary">1 Year</p>
-              <p className="mt-1 text-sm font-medium text-muted-foreground">3 to 18 Locations</p>
+              <p className="font-display text-4xl font-extrabold tracking-tight text-primary">{dict.yearValue}</p>
+              <p className="mt-1 text-sm font-medium text-muted-foreground">{dict.yearLabel}</p>
             </div>
           </div>
         </Reveal>

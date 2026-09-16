@@ -4,85 +4,52 @@ import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { IconCheck, IconClipboardCheck, IconDocument, IconShield, IconTag, IconUsers } from "@/components/icons";
+import { getDictionary } from "../dictionaries";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Founded by Moe Naji, ClaimSafe provides a premium warranty-management service built exclusively for Stellantis dealerships.",
-};
+const reasonIcons = [IconClipboardCheck, IconDocument, IconShield, IconUsers, IconTag];
 
-const reasons = [
-  {
-    number: "01",
-    title: "First-Time Accuracy",
-    description: "We submit clean, complete, audit-ready claims to reduce rejections, resubmissions, and delays.",
-    icon: IconClipboardCheck,
-  },
-  {
-    number: "02",
-    title: "Faster Approvals",
-    description: "We handle RA, WAC, loaner requests, DI submissions, and escalations quickly and professionally.",
-    icon: IconDocument,
-  },
-  {
-    number: "03",
-    title: "More Approved Hours",
-    description: "We defend diagnostic time and required operations to maximize approved labor revenue.",
-    icon: IconShield,
-  },
-  {
-    number: "04",
-    title: "Zero Advisor Stress",
-    description: "Your advisors focus on customers — not paperwork, follow-ups, or chasing guidelines.",
-    icon: IconUsers,
-  },
-  {
-    number: "05",
-    title: "Predictable Pricing",
-    description: "Simple monthly pricing with no surprises. A premium service that pays for itself through increased recovery.",
-    icon: IconTag,
-  },
-];
+export async function generateMetadata({ params }: PageProps<"/[lang]/about">): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return {
+    title: dict.about.meta.title,
+    description: dict.about.meta.description,
+  };
+}
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: PageProps<"/[lang]/about">) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const about = dict.about;
+  const reasons = about.why.reasons.map((reason, i) => ({ ...reason, icon: reasonIcons[i] }));
+
   return (
     <>
-      <PageHero
-        eyebrow="Who We Are"
-        title="About ClaimSafe"
-        description="A premium warranty-management service built exclusively for Stellantis dealerships across Canada."
-      />
+      <PageHero eyebrow={about.hero.eyebrow} title={about.hero.title} description={about.hero.description} />
 
       <section className="relative z-10 -mt-8 rounded-t-[2.5rem] border-b border-border bg-background py-20 sm:-mt-10 sm:rounded-t-[3rem] sm:py-28">
         <Container className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Our Story</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{about.story.eyebrow}</p>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-              About ClaimSafe
+              {about.story.title}
             </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-secondary sm:text-lg">
-              <p>
-                Founded by Moe Naji, ClaimSafe provides a premium warranty-management service built exclusively
-                for Stellantis dealerships. We manage your entire warranty workflow claims.
-              </p>
-              <p>
-                Operating as an integrated part of your service department, ClaimSafe delivers audit-ready
-                documentation, first-time approvals, and a seamless process that improves profitability and
-                customer satisfaction.
-              </p>
+              <p>{about.story.paragraph1}</p>
+              <p>{about.story.paragraph2}</p>
             </div>
             <div className="mt-8 rounded-2xl border border-border bg-card p-6 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-accent">Our purpose is clear</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent">{about.story.purposeLabel}</p>
               <p className="mt-2 font-display text-2xl font-extrabold tracking-tight text-primary sm:text-3xl">
-                Fast. Accurate. Profitable.
+                {about.story.purposeTitle}
               </p>
-              <p className="mt-1 text-base text-secondary">Your warranty program — elevated.</p>
+              <p className="mt-1 text-base text-secondary">{about.story.purposeSubtitle}</p>
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl">
             <Image
               src="https://images.unsplash.com/photo-1632733711679-529326f6db12?auto=format&fit=crop&crop=entropy&w=1200&h=1400&q=80"
-              alt="A technician inspecting a vehicle's fuse box during a warranty diagnostic"
+              alt={about.story.imageAlt}
               width={1200}
               height={1400}
               className="h-auto w-full object-cover"
@@ -94,15 +61,11 @@ export default function AboutPage() {
 
       <section className="bg-muted py-20 sm:py-28">
         <Container>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Why Choose Us</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{about.why.eyebrow}</p>
           <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-            Built for Dealership Results
+            {about.why.title}
           </h2>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-secondary sm:text-lg">
-            We help Stellantis dealerships recover more warranty revenue with less stress, fewer rejections,
-            and faster approvals. Our process is clean, reliable, and built to make your service department
-            run smoothly every single day.
-          </p>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-secondary sm:text-lg">{about.why.description}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reasons.map((reason, i) => (
               <Reveal key={reason.number} delay={i * 80}>
@@ -127,10 +90,8 @@ export default function AboutPage() {
             <Reveal delay={reasons.length * 80}>
               <div className="flex h-full flex-col justify-center gap-3 rounded-2xl border-[1.5px] border-dashed border-accent/30 bg-accent/5 p-7">
                 <IconCheck className="h-6 w-6 text-accent" />
-                <p className="text-base font-semibold text-primary">All Services Under One Roof</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  Claim processing, backlog recovery, and advisor training — everything managed in one place.
-                </p>
+                <p className="text-base font-semibold text-primary">{about.why.allInOne.title}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">{about.why.allInOne.description}</p>
               </div>
             </Reveal>
           </div>

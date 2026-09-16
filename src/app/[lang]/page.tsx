@@ -7,123 +7,22 @@ import { IconCar, IconCheck, IconChat, IconClipboardCheck, IconDocument, IconSca
 import { Marquee } from "@/components/Marquee";
 import { Reveal } from "@/components/Reveal";
 import { StatBar } from "@/components/StatBar";
+import { localePath, siteInfo } from "@/lib/nav";
+import { getDictionary } from "./dictionaries";
 
-const marqueeItems = [
-  "Warranty Claim Management",
-  "Consulting",
-  "Schedule Reconciliation",
-  "Backlog Claim Recovery",
-  "DI & WAC Submissions",
-  "Advisor Training",
-];
+const serviceIcons = [IconDocument, IconChat, IconScale];
+const whyStatIcons = [IconShield, IconCar, IconUsers];
+const whyItemIcons = [IconClipboardCheck, IconShield, IconDocument, IconUsers];
 
-const services = [
-  {
-    title: "Warranty Claim Management",
-    description:
-      "We handle every step of the warranty claim process — from verification and documentation to submission and follow-up — ensuring accuracy, compliance, and faster payments.",
-    icon: IconDocument,
-  },
-  {
-    title: "Consulting",
-    description:
-      "We provide expert guidance to help dealerships improve their warranty processes, reduce rejections, and maximize factory reimbursements through proven best practices.",
-    icon: IconChat,
-  },
-  {
-    title: "Schedule Reconciliation",
-    description:
-      "We review and align your warranty schedules with manufacturer payments, identifying discrepancies and ensuring your financial records stay accurate and transparent.",
-    icon: IconScale,
-  },
-];
+export default async function Home({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const home = dict.home;
 
-const whyStats = [
-  { icon: IconShield, value: "18+", label: "Dealership partners across Canada" },
-  { icon: IconCar, value: "6", label: "Stellantis brands served" },
-  { icon: IconUsers, value: "1 → 18", label: "Locations grown in a single year" },
-];
+  const services = home.services.items.map((item, i) => ({ ...item, icon: serviceIcons[i] }));
+  const whyStats = home.why.stats.map((stat, i) => ({ ...stat, icon: whyStatIcons[i] }));
+  const whyItems = home.why.items.map((item, i) => ({ ...item, icon: whyItemIcons[i] }));
 
-const whyItems = [
-  {
-    title: "Fast Claim Submissions",
-    description: "Clean, complete, audit-ready claims submitted quickly to reduce rejections and delays.",
-    icon: IconClipboardCheck,
-  },
-  {
-    title: "Reduced Rejections & Chargebacks",
-    description: "We defend diagnostic time and required operations so fewer claims come back unpaid.",
-    icon: IconShield,
-  },
-  {
-    title: "More Recovered Warranty Revenue",
-    description: "We chase down RA, WAC, and DI approvals so nothing eligible slips through the cracks.",
-    icon: IconDocument,
-  },
-  {
-    title: "Less Workload for Your Team",
-    description: "Advisors and managers stay focused on customers — not paperwork and follow-ups.",
-    icon: IconUsers,
-  },
-];
-
-const process = [
-  {
-    number: "01",
-    title: "Onboarding & Assessment",
-    description:
-      "We review your current warranty workflow, open claims, and backlog to understand exactly where revenue is being lost.",
-  },
-  {
-    number: "02",
-    title: "We Take Over Your Claims",
-    description:
-      "Our team manages submissions, DI approvals, WAC negotiations, and VOR escalations as an extension of your service department.",
-  },
-  {
-    number: "03",
-    title: "You Get Paid Faster",
-    description:
-      "Clean documentation and consistent follow-up mean fewer rejections, quicker approvals, and more recovered revenue.",
-  },
-];
-
-const whoWeHelp = ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Service Advisors", "Warranty Administrators"];
-
-const faqs = [
-  {
-    question: "Which dealerships do you work with?",
-    answer:
-      "We partner with Chrysler, Dodge, Jeep, Ram, Fiat, and Alfa Romeo dealerships across Canada, handling their full warranty claim workflow from submission to payment.",
-  },
-  {
-    question: "How does ClaimSafe fit into our existing service department?",
-    answer:
-      "We operate as an extension of your team — not a replacement. Your advisors and technicians keep working as usual while we manage claim documentation, submission, and follow-up in the background.",
-  },
-  {
-    question: "Can you help with an existing backlog of rejected or unfiled claims?",
-    answer:
-      "Yes. Backlog claims processing is one of our core services — we review old, pending, or rejected claims, correct them, and resubmit to recover eligible revenue.",
-  },
-  {
-    question: "What does pricing look like?",
-    answer:
-      "We offer simple, predictable monthly pricing with no surprise fees. Because our service is built to recover warranty revenue you'd otherwise lose, it typically pays for itself.",
-  },
-  {
-    question: "How quickly can we get started?",
-    answer:
-      "After a short onboarding assessment of your current claims and workflow, we can begin managing new submissions right away while we work through any backlog in parallel.",
-  },
-  {
-    question: "Do you offer training for our advisors and technicians?",
-    answer:
-      "Yes. We train your team on documentation best practices for repairs, diagnostics, and inspections so future claims are approved faster and rejected less often.",
-  },
-];
-
-export default function Home() {
   return (
     <>
       {/* Hero */}
@@ -136,36 +35,37 @@ export default function Home() {
               style={{ animationDelay: "0ms" }}
             >
               <span className="animate-pulse-dot h-2 w-2 rounded-full bg-accent-light" />
-              <span className="text-xs font-semibold text-accent-light">Trusted by Stellantis Dealerships Across Canada</span>
+              <span className="text-xs font-semibold text-accent-light">{home.hero.badge}</span>
             </div>
             <h1
               className="animate-entrance font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl"
               style={{ animationDelay: "90ms" }}
             >
-              Warranty Claims,
+              {home.hero.titleLine1}
               <span className="mt-1 block font-display text-3xl font-bold text-white/60 sm:text-5xl">
-                Made Simple.
+                {home.hero.titleLine2}
               </span>
             </h1>
             <p
               className="animate-entrance max-w-xl text-base leading-relaxed text-white/55 sm:text-lg"
               style={{ animationDelay: "150ms" }}
             >
-              Full-service warranty claim management for Stellantis dealerships — handled with the accuracy, speed,
-              and accountability your service department deserves.
+              {home.hero.description}
             </p>
             <div className="animate-entrance flex flex-wrap gap-3" style={{ animationDelay: "220ms" }}>
-              <Link
-                href="/contact"
+              <a
+                href={siteInfo.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-gradient inline-flex cursor-pointer items-center justify-center rounded-full px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Book a Consultation
-              </Link>
+                {home.hero.ctaPrimary}
+              </a>
               <Link
-                href="/services"
+                href={localePath(lang, "/services")}
                 className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/8 hover:border-white/40"
               >
-                Explore Services
+                {home.hero.ctaSecondary}
               </Link>
             </div>
           </div>
@@ -177,7 +77,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-3xl shadow-[0_32px_80px_rgba(0,0,0,0.35)] ring-1 ring-white/10">
               <Image
                 src="/img/home/photo-hero.jpg"
-                alt="A service advisor reviewing an approved warranty claim on screen, with a dealership service bay behind him"
+                alt={home.hero.imageAlt}
                 width={908}
                 height={650}
                 priority
@@ -189,9 +89,9 @@ export default function Home() {
         </Container>
       </section>
 
-      <StatBar />
+      <StatBar dict={home.statBar} />
 
-      <Marquee items={marqueeItems} />
+      <Marquee items={home.marquee} />
 
       {/* About intro */}
       <section className="border-b border-border bg-background py-20 sm:py-28">
@@ -200,7 +100,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-2xl">
               <Image
                 src="/img/home/photo-warranty.jpg"
-                alt="A ClaimSafe team reviewing warranty claim submissions, approvals, and recoveries on screen"
+                alt={home.about.imageAlt}
                 width={917}
                 height={623}
                 priority
@@ -210,42 +110,29 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Warranty Management Services · About Us
-            </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{home.about.eyebrow}</p>
             <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-              <span className="font-serif font-normal italic text-accent">&ldquo;Your Warranty Partner,</span>
+              <span className="font-serif font-normal italic text-accent">{home.about.titleLine1}</span>
               <br />
-              Not Just An Administrator.&rdquo;
+              {home.about.titleLine2}
             </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-secondary sm:text-lg">
-              <p>
-                Founded by Moe Naji after years inside dealership service departments, ClaimSafe exists to end
-                the time and revenue lost to incomplete or rejected warranty claims.
-              </p>
-              <p>
-                What began with 3 dealership partners has grown to 18 in just one year. Today we partner with
-                leading Chrysler, Dodge, Jeep, Ram, Fiat, and Alfa Romeo dealerships across Canada — handling
-                claim submissions, DI approvals, WAC negotiations, VOR escalations, and accounting.
-              </p>
+              <p>{home.about.paragraph1}</p>
+              <p>{home.about.paragraph2}</p>
             </div>
-            <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-primary">Our approach is simple:</p>
+            <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-primary">{home.about.approachLabel}</p>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-              {["Maximize warranty recovery", "Improve service department efficiency", "Reduce chargebacks"].map(
-                (item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2.5 rounded-xl border border-border bg-card p-4 text-sm font-medium text-card-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-sm"
-                  >
-                    <IconCheck className="mt-0.5 h-4.5 w-4.5 shrink-0 text-accent" />
-                    {item}
-                  </li>
-                ),
-              )}
+              {home.about.approachItems.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 rounded-xl border border-border bg-card p-4 text-sm font-medium text-card-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-sm"
+                >
+                  <IconCheck className="mt-0.5 h-4.5 w-4.5 shrink-0 text-accent" />
+                  {item}
+                </li>
+              ))}
             </ul>
-            <p className="mt-8 text-base leading-relaxed text-secondary sm:text-lg">
-              At ClaimSafe, we do more than manage claims — we become an extension of your service team.
-            </p>
+            <p className="mt-8 text-base leading-relaxed text-secondary sm:text-lg">{home.about.closing}</p>
           </div>
         </Container>
       </section>
@@ -255,16 +142,16 @@ export default function Home() {
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">What We Do</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{home.services.eyebrow}</p>
               <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                Warranty Management Services
+                {home.services.title}
               </h2>
             </div>
             <Link
-              href="/services"
+              href={localePath(lang, "/services")}
               className="inline-flex shrink-0 cursor-pointer items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-dark"
             >
-              View All Services
+              {home.services.viewAll}
             </Link>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
@@ -281,10 +168,10 @@ export default function Home() {
                     {service.description}
                   </p>
                   <Link
-                    href="/services"
+                    href={localePath(lang, "/services")}
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors duration-300 group-hover:text-accent-light"
                   >
-                    Learn more
+                    {home.services.learnMore}
                     <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                   </Link>
                 </div>
@@ -323,14 +210,11 @@ export default function Home() {
             ))}
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Why ClaimSafe</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{home.why.eyebrow}</p>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-              Why Dealerships Choose Us
+              {home.why.title}
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-secondary sm:text-lg">
-              We become an extension of your service department — handling warranty operations with speed,
-              accuracy, and accountability so your team can stay focused on customers and repairs.
-            </p>
+            <p className="mt-5 text-base leading-relaxed text-secondary sm:text-lg">{home.why.description}</p>
             <div className="mt-8 flex flex-col gap-5">
               {whyItems.map((item) => (
                 <div key={item.title} className="flex gap-4">
@@ -352,13 +236,13 @@ export default function Home() {
       <section className="border-t border-border bg-muted py-20 sm:py-28">
         <Container>
           <div className="mx-auto max-w-xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">How It Works</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{home.process.eyebrow}</p>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-              Get Started in 3 Simple Steps
+              {home.process.title}
             </h2>
           </div>
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
-            {process.map((step, i) => (
+            {home.process.steps.map((step, i) => (
               <Reveal key={step.number} delay={i * 100}>
                 <div className="h-full rounded-2xl border border-border bg-card p-8">
                   <p className="font-display text-5xl font-extrabold tracking-tight text-border">{step.number}</p>
@@ -375,13 +259,13 @@ export default function Home() {
       <section className="bg-background py-16 sm:py-20">
         <Container>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Who We Serve</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{home.whoWeHelp.eyebrow}</p>
             <h2 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-primary sm:text-3xl">
-              Stellantis Dealerships & Their Teams
+              {home.whoWeHelp.title}
             </h2>
           </div>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            {whoWeHelp.map((item) => (
+            {home.whoWeHelp.items.map((item) => (
               <span
                 key={item}
                 className="inline-flex cursor-default items-center gap-2 rounded-full border-[1.5px] border-border bg-card px-5 py-3 text-sm font-semibold text-primary transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-sm"
@@ -398,13 +282,13 @@ export default function Home() {
       <section className="border-t border-border bg-muted py-20 sm:py-28">
         <Container className="max-w-3xl">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">FAQ</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{home.faq.eyebrow}</p>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-              Frequently Asked Questions
+              {home.faq.title}
             </h2>
           </div>
           <div className="mt-12">
-            <FaqAccordion items={faqs} />
+            <FaqAccordion items={home.faq.items} />
           </div>
         </Container>
       </section>
@@ -414,14 +298,16 @@ export default function Home() {
         <GridGlow />
         <Container className="relative flex flex-col items-center gap-6 text-center">
           <h2 className="max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Ready to Improve Your Warranty Operations?
+            {home.cta.title}
           </h2>
-          <Link
-            href="/contact"
+          <a
+            href={siteInfo.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-gradient inline-flex cursor-pointer items-center justify-center rounded-full px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Request Consultation
-          </Link>
+            {home.cta.button}
+          </a>
         </Container>
       </section>
 
@@ -430,27 +316,23 @@ export default function Home() {
         <Container>
           <div className="rounded-2xl border border-border bg-card p-8 sm:p-10">
             <h2 className="font-display text-2xl font-extrabold text-primary sm:text-3xl">
-              Hiring in the Automotive Industry?
+              {home.safeAutoJobs.title}
             </h2>
             <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex items-start gap-4">
                 <Image
                   src="/img/safeautojobs-icon.png"
-                  alt="SafeAutoJobs"
+                  alt={home.safeAutoJobs.logoAlt}
                   width={512}
                   height={512}
                   className="h-12 w-12 shrink-0 rounded-xl sm:h-14 sm:w-14"
                 />
                 <div>
-                  <h3 className="text-lg font-semibold text-primary">Meet SafeAutoJobs</h3>
+                  <h3 className="text-lg font-semibold text-primary">{home.safeAutoJobs.heading}</h3>
                   <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    SafeAutoJobs is a recruitment marketplace built specifically for the automotive industry,
-                    connecting automotive businesses with automotive professionals.
+                    {home.safeAutoJobs.description}
                   </p>
-                  <p className="mt-3 text-xs font-medium text-muted-foreground sm:text-sm">
-                    Technicians • Service Advisors • Parts Professionals • Sales • Body Technicians • Detailers
-                    &amp; More
-                  </p>
+                  <p className="mt-3 text-xs font-medium text-muted-foreground sm:text-sm">{home.safeAutoJobs.roles}</p>
                 </div>
               </div>
               <a
@@ -459,12 +341,10 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-full border-2 border-primary px-6 py-3 text-sm font-semibold text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-md active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               >
-                VISIT SAFE AUTO JOBS →
+                {home.safeAutoJobs.cta}
               </a>
             </div>
-            <p className="mt-6 border-t border-border pt-4 text-xs text-muted-foreground">
-              A ClaimSafe Inc. company.
-            </p>
+            <p className="mt-6 border-t border-border pt-4 text-xs text-muted-foreground">{home.safeAutoJobs.footnote}</p>
           </div>
         </Container>
       </section>

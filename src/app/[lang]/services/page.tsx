@@ -1,58 +1,43 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "@/components/Container";
 import { GridGlow } from "@/components/GridGlow";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { IconClipboardCheck, IconDocument, IconUsers } from "@/components/icons";
+import { siteInfo } from "@/lib/nav";
+import { getDictionary } from "../dictionaries";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Claim processing, backlog claims processing, and advisor & technician training for Stellantis dealership warranty operations.",
-};
-
-const services = [
-  {
-    title: "Claim Processing",
-    description:
-      "We handle all Stellantis warranty claims — from submission to approval — ensuring clean documentation and audit-ready accuracy. Fewer rejections, faster payments, and more approved hours.",
-    icon: IconDocument,
-    image: "/img/services/photo-1.jpg",
-    alt: "A technician inspecting a vehicle under its open hood on a service lift",
-  },
-  {
-    title: "Backlog Claims Processing",
-    description:
-      "We take over existing backlog claims and clean them quickly. Old, pending, or rejected claims — we fix, submit, and recover eligible revenue for your service department.",
-    icon: IconClipboardCheck,
-    image: "/img/services/photo-3.jpg",
-    alt: "A busy multi-bay service department with technicians working on several vehicles at once",
-  },
-  {
-    title: "Advisor & Technician Training",
-    description:
-      "We train advisors and technicians to document repairs, diagnostics, and inspections correctly so claims are approved faster. Best practices that reduce rejections.",
-    icon: IconUsers,
-    image: "/img/services/photo-2.jpg",
-    alt: "A service advisor and technician reviewing a vehicle together in the service bay",
-  },
+const serviceIcons = [IconDocument, IconClipboardCheck, IconUsers];
+const serviceImages = [
+  { src: "/img/services/photo-1.jpg" },
+  { src: "/img/services/photo-3.jpg" },
+  { src: "/img/services/photo-2.jpg" },
 ];
 
-export default function ServicesPage() {
+export async function generateMetadata({ params }: PageProps<"/[lang]/services">): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return {
+    title: dict.services.meta.title,
+    description: dict.services.meta.description,
+  };
+}
+
+export default async function ServicesPage({ params }: PageProps<"/[lang]/services">) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const s = dict.services;
+  const services = s.items.map((item, i) => ({ ...item, icon: serviceIcons[i], image: serviceImages[i].src }));
+
   return (
     <>
-      <PageHero
-        eyebrow="What We Do"
-        title="Services"
-        description="Everything your service department needs to submit, recover, and get paid on warranty claims — handled end to end."
-      />
+      <PageHero eyebrow={s.hero.eyebrow} title={s.hero.title} description={s.hero.description} />
 
       <section className="relative z-10 -mt-8 rounded-t-[2.5rem] bg-background py-20 sm:-mt-10 sm:rounded-t-[3rem] sm:py-28">
         <Container>
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-            Warranty Services
+            {s.sectionTitle}
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {services.map((service, i) => (
@@ -89,15 +74,15 @@ export default function ServicesPage() {
       <section className="relative z-10 -mt-8 overflow-hidden rounded-t-[2.5rem] bg-primary py-20 text-primary-foreground sm:-mt-10 sm:rounded-t-[3rem] sm:py-24">
         <GridGlow />
         <Container className="relative flex flex-col items-center gap-6 text-center">
-          <h2 className="max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Trusted Warranty Support for Growing Dealerships
-          </h2>
-          <Link
-            href="/contact"
+          <h2 className="max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">{s.cta.title}</h2>
+          <a
+            href={siteInfo.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-gradient inline-flex cursor-pointer items-center justify-center rounded-full px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Request Consultation
-          </Link>
+            {s.cta.button}
+          </a>
         </Container>
       </section>
     </>

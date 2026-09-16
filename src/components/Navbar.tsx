@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { navLinks, siteInfo } from "@/lib/nav";
+import { navLinks, siteInfo, localePath } from "@/lib/nav";
+import type { Dictionary, Locale } from "@/app/[lang]/dictionaries";
 import { IconClose, IconMenu } from "./icons";
 
-export function Navbar() {
+export function Navbar({ lang, dict }: { lang: string; dict: Dictionary }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -21,6 +22,9 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const otherLang: Locale = lang === "en" ? "fr" : "en";
+  const otherLangPathname = pathname.replace(/^\/(en|fr)/, `/${otherLang}`);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out ${
@@ -30,7 +34,7 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="shrink-0" aria-label="ClaimSafe home">
+        <Link href={localePath(lang, "/")} className="shrink-0" aria-label={dict.nav.homeAriaLabel}>
           <Image
             src="/img/logo-white.png"
             alt="ClaimSafe"
@@ -43,35 +47,45 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {navLinks.map((link) => {
-            const active = pathname === link.href;
+            const href = localePath(lang, link.path);
+            const active = pathname === href;
             return (
               <Link
-                key={link.href}
-                href={link.href}
+                key={link.key}
+                href={href}
                 aria-current={active ? "page" : undefined}
                 className={`rounded-lg px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200 hover:bg-white/8 hover:text-white ${
                   active ? "text-white" : "text-white/65"
                 }`}
               >
-                {link.label}
+                {dict.nav[link.key]}
               </Link>
             );
           })}
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
+          <Link
+            href={otherLangPathname}
+            className="text-sm font-semibold text-white/55 transition-colors duration-200 hover:text-accent-light"
+            aria-label={`${dict.language[otherLang]}`}
+          >
+            {otherLang.toUpperCase()}
+          </Link>
           <a
             href={`tel:${siteInfo.phone.replace(/[^+\d]/g, "")}`}
             className="text-sm font-semibold text-white/55 transition-colors duration-200 hover:text-accent-light"
           >
             {siteInfo.phone}
           </a>
-          <Link
-            href="/contact"
+          <a
+            href={siteInfo.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="cursor-pointer rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent-light hover:text-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Book Now
-          </Link>
+            {dict.nav.bookNow}
+          </a>
         </div>
 
         <button
@@ -79,7 +93,7 @@ export function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
           className="cursor-pointer rounded-lg bg-white/6 p-2 text-white md:hidden"
         >
           {open ? <IconClose className="h-6 w-6" /> : <IconMenu className="h-6 w-6" />}
@@ -94,24 +108,35 @@ export function Navbar() {
         >
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.key}>
                 <Link
-                  href={link.href}
+                  href={localePath(lang, link.path)}
                   onClick={() => setOpen(false)}
                   className="block min-h-11 rounded-lg px-3 py-2.5 text-base font-medium text-white/80 transition-colors duration-200 hover:bg-white/8 hover:text-white"
                 >
-                  {link.label}
+                  {dict.nav[link.key]}
                 </Link>
               </li>
             ))}
             <li className="pt-2">
               <Link
-                href="/contact"
+                href={otherLangPathname}
+                onClick={() => setOpen(false)}
+                className="block min-h-11 rounded-lg px-3 py-2.5 text-base font-medium text-white/80 transition-colors duration-200 hover:bg-white/8 hover:text-white"
+              >
+                {dict.language[otherLang]}
+              </Link>
+            </li>
+            <li className="pt-2">
+              <a
+                href={siteInfo.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="block cursor-pointer rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-white"
               >
-                Book Now
-              </Link>
+                {dict.nav.bookNow}
+              </a>
             </li>
           </ul>
         </nav>
