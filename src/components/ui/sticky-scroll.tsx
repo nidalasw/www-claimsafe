@@ -18,10 +18,10 @@ const leftPhotos: GalleryPhoto[] = [
     src: "/img/home/photo_7.png",
     alt: "Dealership service bay with technicians working on vehicles across multiple lifts",
   },
-  {
-    src: "/img/home/photo_2.png",
-    alt: "Technician inspecting a vehicle's brakes and suspension on a lift",
-  },
+  // {
+  //   src: "/img/home/photo_2.png",
+  //   alt: "Technician inspecting a vehicle's brakes and suspension on a lift",
+  // },
 ];
 
 const stickyPhotos: GalleryPhoto[] = [
@@ -33,13 +33,17 @@ const stickyPhotos: GalleryPhoto[] = [
     src: "/img/home/photo_6.png",
     alt: "Stack of warranty claim paperwork ready for submission and review",
   },
+   {
+    src: "/img/home/photo_2.png",
+    alt: "Technician inspecting a vehicle's brakes and suspension on a lift",
+  },
 ];
 
 const rightPhotos: GalleryPhoto[] = [
-  {
-    src: "/img/home/photo_5.png",
-    alt: "ClaimSafe advisor consulting with a dealership partner at a desk",
-  },
+  // {
+  //   src: "/img/home/photo_5.png",
+  //   alt: "ClaimSafe advisor consulting with a dealership partner at a desk",
+  // },
   {
     src: "/img/home/photo_4.png",
     alt: "Handshake between a dealership manager and technician confirming a completed repair",
