@@ -11,8 +11,8 @@ import { getDictionary } from "../dictionaries";
 const serviceIcons = [IconDocument, IconClipboardCheck, IconUsers];
 const serviceImages = [
   { src: "/img/services/photo-1.jpg" },
-  { src: "/img/services/photo-3.jpg" },
   { src: "/img/services/photo-2.jpg" },
+  { src: "/img/services/photo-3.jpg" },
 ];
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/services">): Promise<Metadata> {
@@ -48,6 +48,7 @@ export default async function ServicesPage({ params }: PageProps<"/[lang]/servic
                       src={service.image}
                       alt={service.alt}
                       fill
+                      loading="eager"
                       sizes="(min-width: 640px) 33vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />

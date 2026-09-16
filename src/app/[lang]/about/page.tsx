@@ -48,7 +48,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           </div>
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1632733711679-529326f6db12?auto=format&fit=crop&crop=entropy&w=1200&h=1400&q=80"
+              src="/img/about/photo-1.jpg"
               alt={about.story.imageAlt}
               width={1200}
               height={1400}

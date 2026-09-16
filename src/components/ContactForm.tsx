@@ -65,6 +65,44 @@ export function ContactForm({ dict }: { dict: Dictionary["contact"]["form"] }) {
       </div>
 
       <div>
+        <label htmlFor="service" className="mb-1.5 block text-sm font-medium text-secondary">
+          {dict.serviceLabel} <span className="text-destructive">*</span>
+        </label>
+        <div className="relative">
+          <select
+            id="service"
+            name="service"
+            required
+            defaultValue=""
+            className={`${inputClass} appearance-none pr-10`}
+          >
+            <option value="" disabled>
+              {dict.servicePlaceholder}
+            </option>
+            {dict.services.map((service) => (
+              <option key={service.value} value={service.value}>
+                {service.label}
+              </option>
+            ))}
+          </select>
+          <svg
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+            className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+          >
+            <path
+              d="M5 7.5L10 12.5L15 7.5"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-secondary">
           {dict.messageLabel}
         </label>

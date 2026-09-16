@@ -29,8 +29,8 @@
   "hours": {
     "label": "Office Hours",
     "items": [
-      { "days": "Mon–Sat", "time": "10:00 am – 9:00 pm" },
-      { "days": "Sunday", "time": "12:00 pm – 5:00 pm" }
+      { "days": "Mon–Sat", "time": "10:00 am – 5:00 pm" },
+      { "days": "Sunday", "time": "Closed" }
     ]
   },
   "contactInfo": {
@@ -297,6 +297,27 @@
       "nameLabel": "Name",
       "emailLabel": "Email",
       "dealershipLabel": "Dealership Name",
+      "serviceLabel": "Service Needed",
+      "servicePlaceholder": "Select a service",
+      "services": [
+        { "value": "chargeback-management", "label": "Chargeback Management" },
+        { "value": "dealership-warranty-training", "label": "Dealership Warranty Department Training" },
+        { "value": "digital-imaging-authorizations", "label": "Digital Imaging Authorizations" },
+        { "value": "loaner-vehicle-rental-tracking", "label": "Loaner Vehicle / Warranty Rental Tracking" },
+        { "value": "powertrain-authorizations", "label": "Powertrain Authorizations" },
+        { "value": "rejected-claims-ra-management", "label": "Rejected Claims / RA Management" },
+        { "value": "technical-documentation-review", "label": "Technical Documentation & Review" },
+        { "value": "vor-claim-management", "label": "VOR Claim Management" },
+        { "value": "warranty-accounting-claim-closing", "label": "Warranty Accounting & Claim Closing" },
+        { "value": "warranty-backlog-cleanup", "label": "Warranty Backlog Cleanup" },
+        { "value": "warranty-claim-auditing", "label": "Warranty Claim Auditing" },
+        { "value": "warranty-kpi-performance-reporting", "label": "Warranty KPI & Performance Reporting" },
+        { "value": "warranty-management", "label": "Warranty Management" },
+        { "value": "warranty-policy-compliance", "label": "Warranty Policy Compliance" },
+        { "value": "warranty-process-consulting", "label": "Warranty Process Consulting" },
+        { "value": "warranty-reconciliation", "label": "Warranty Reconciliation" },
+        { "value": "other", "label": "Other" }
+      ],
       "messageLabel": "How Can We Help?",
       "submit": "Request a Consultation",
       "submitting": "Sending…",
