@@ -321,11 +321,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex items-start gap-4">
                 <Image
-                  src="/img/safeautojobs-icon.png"
+                  src="/safeautojobs-transparent.png"
                   alt={home.safeAutoJobs.logoAlt}
-                  width={512}
-                  height={512}
-                  className="h-12 w-12 shrink-0 rounded-xl sm:h-14 sm:w-14"
+                  width={720}
+                  height={150}
+                  className="h-10 w-auto shrink-0 sm:h-12"
                 />
                 <div>
                   <h3 className="text-lg font-semibold text-primary">{home.safeAutoJobs.heading}</h3>
