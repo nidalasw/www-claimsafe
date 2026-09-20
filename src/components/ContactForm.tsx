@@ -16,9 +16,9 @@ export function ContactForm({ dict }: { dict: Dictionary["contact"]["form"] }) {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formspree.io/f/xppwpwon", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Request failed");
