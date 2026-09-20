@@ -145,7 +145,7 @@
     "whoWeHelp": {
       "eyebrow": "Qui nous servons",
       "title": "Concessionnaires Stellantis et leurs équipes",
-      "items": ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Conseillers au service", "Administrateurs de garantie"]
+      "items": ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Abarth"]
     },
     "faq": {
       "eyebrow": "FAQ",
@@ -316,6 +316,18 @@
         { "value": "warranty-backlog-cleanup", "label": "Résorption de l'arriéré de garantie" },
         { "value": "loaner-vehicle-rental-tracking", "label": "Suivi des véhicules de courtoisie / location sous garantie" },
         { "value": "warranty-claim-auditing", "label": "Vérification des réclamations de garantie" },
+        { "value": "other", "label": "Autre" }
+      ],
+      "sourceLabel": "Comment avez-vous entendu parler de nous?",
+      "sourcePlaceholder": "Sélectionnez une option",
+      "sources": [
+        { "value": "referral-dealership", "label": "Référence – Autre concession" },
+        { "value": "referral-oem-consultant-company", "label": "Référence – Représentant OEM, consultant ou entreprise" },
+        { "value": "google-search", "label": "Recherche Google" },
+        { "value": "facebook", "label": "Facebook" },
+        { "value": "linkedin", "label": "LinkedIn" },
+        { "value": "instagram", "label": "Instagram" },
+        { "value": "chatgpt", "label": "ChatGPT" },
         { "value": "other", "label": "Autre" }
       ],
       "messageLabel": "Comment pouvons-nous vous aider?",

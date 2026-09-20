@@ -8,7 +8,7 @@ export function StatBar({ dict }: { dict: Dictionary["home"]["statBar"] }) {
     <section className="relative z-10 -mt-10 sm:-mt-14">
       <Container>
         <Reveal>
-          <div className="grid gap-6 rounded-3xl border border-white/60 bg-white/75 p-8 shadow-2xl backdrop-blur-xl sm:grid-cols-3 sm:p-10">
+          <div className="grid gap-6 rounded-3xl border border-white/60 bg-white p-8 shadow-2xl backdrop-blur-xl sm:grid-cols-3 sm:p-10">
             <div className="text-center sm:border-r sm:border-border/60 sm:pr-6 sm:text-left">
               <p className="font-display text-4xl font-extrabold tracking-tight text-primary">
                 <StatNumber value={18} suffix="+" />

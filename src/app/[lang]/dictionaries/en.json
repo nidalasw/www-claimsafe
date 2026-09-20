@@ -145,7 +145,7 @@
     "whoWeHelp": {
       "eyebrow": "Who We Serve",
       "title": "Stellantis Dealerships & Their Teams",
-      "items": ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Service Advisors", "Warranty Administrators"]
+      "items": ["Chrysler", "Dodge", "Jeep", "Ram", "Fiat", "Alfa Romeo", "Abarth"]
     },
     "faq": {
       "eyebrow": "FAQ",
@@ -316,6 +316,18 @@
         { "value": "warranty-policy-compliance", "label": "Warranty Policy Compliance" },
         { "value": "warranty-process-consulting", "label": "Warranty Process Consulting" },
         { "value": "warranty-reconciliation", "label": "Warranty Reconciliation" },
+        { "value": "other", "label": "Other" }
+      ],
+      "sourceLabel": "How Did You Hear About Us?",
+      "sourcePlaceholder": "Select an option",
+      "sources": [
+        { "value": "referral-dealership", "label": "Referral – Other Dealership" },
+        { "value": "referral-oem-consultant-company", "label": "Referral – OEM Rep, Consultant, or Company" },
+        { "value": "google-search", "label": "Google Search" },
+        { "value": "facebook", "label": "Facebook" },
+        { "value": "linkedin", "label": "LinkedIn" },
+        { "value": "instagram", "label": "Instagram" },
+        { "value": "chatgpt", "label": "ChatGPT" },
         { "value": "other", "label": "Other" }
       ],
       "messageLabel": "How Can We Help?",
