@@ -29,8 +29,8 @@
   "hours": {
     "label": "Heures d'ouverture",
     "items": [
-      { "days": "Lun. – sam.", "time": "10 h à 21 h" },
-      { "days": "Dimanche", "time": "12 h à 17 h" }
+      { "days": "Lun. – ven.", "time": "10 h à 18 h" },
+      { "days": "Sam. – dim.", "time": "Fermé" }
     ]
   },
   "contactInfo": {

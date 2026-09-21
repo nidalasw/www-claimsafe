@@ -29,8 +29,8 @@
   "hours": {
     "label": "Office Hours",
     "items": [
-      { "days": "Mon–Sat", "time": "10:00 am – 5:00 pm" },
-      { "days": "Sunday", "time": "Closed" }
+      { "days": "Mon–Fri", "time": "10:00 am – 6:00 pm" },
+      { "days": "Sat–Sun", "time": "Closed" }
     ]
   },
   "contactInfo": {
