@@ -4,8 +4,6 @@ Corporate website for Gestion ClaimSafe Inc., a warranty-management service for 
 
 ## Getting Started
 
-For the password-protected website text editor at `/admin`, see [admin setup instructions](ADMIN.md).
-
 First, run the development server:
 
 ```bash
